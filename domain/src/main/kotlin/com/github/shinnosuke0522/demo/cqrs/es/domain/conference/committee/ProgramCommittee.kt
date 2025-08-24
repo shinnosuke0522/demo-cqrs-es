@@ -1,4 +1,4 @@
-package com.github.shinnosuke0522.demo.cqrs.es.domain.conference.programcommitee
+package com.github.shinnosuke0522.demo.cqrs.es.domain.conference.committee
 
 import com.github.shinnosuke0522.demo.cqrs.es.domain.conference.event.ConferenceEventId
 import com.github.shinnosuke0522.demo.cqrs.es.domain.user.UserId
