@@ -1,9 +1,6 @@
 package com.github.shinnosuke0522.demo.cqrs.es.domain.conference.event
 
-import arrow.core.Either
-import com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util.ULID
-import com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util.failure
-import com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util.success
+import com.github.shinnosuke0522.demo.cqrs.es.libraries.fundamentals.ULID
 
 @JvmInline
 value class ConferenceEventId private constructor(val value: ULID) : Comparable<ConferenceEventId> {

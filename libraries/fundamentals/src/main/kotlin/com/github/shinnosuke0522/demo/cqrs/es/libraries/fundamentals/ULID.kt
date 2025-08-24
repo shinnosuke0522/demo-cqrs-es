@@ -1,4 +1,4 @@
-package com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util
+package com.github.shinnosuke0522.demo.cqrs.es.libraries.fundamentals
 
 import com.github.f4b6a3.ulid.Ulid
 import com.github.f4b6a3.ulid.UlidCreator

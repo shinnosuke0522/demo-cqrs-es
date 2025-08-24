@@ -7,3 +7,4 @@ pluginManagement {
     }
 }
 include(":domain")
+include(":libraries:fundamentals")
