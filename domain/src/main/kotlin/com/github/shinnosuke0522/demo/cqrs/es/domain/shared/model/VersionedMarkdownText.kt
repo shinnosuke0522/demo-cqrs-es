@@ -1,4 +1,4 @@
-package com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util
+package com.github.shinnosuke0522.demo.cqrs.es.domain.shared.model
 
 import java.nio.charset.StandardCharsets
 import java.security.MessageDigest
@@ -47,7 +47,7 @@ data class VersionedMarkdownText private constructor(
         newRawContent: String,
         updatedBy: String,
         at: Instant = Instant.now(),
-        maxLen: Int = MarkdownText.MAX_LEN
+        maxLen: Int = MAX_LEN
     ): VersionedMarkdownText {
         // 常にファクトリを通して正規化・検証
         val normalized = MarkdownText(newRawContent)
@@ -77,7 +77,7 @@ data class VersionedMarkdownText private constructor(
             rawContent: String,
             updatedBy: String,
             at: Instant = Instant.now(),
-            maxLen: Int = MarkdownText.MAX_LEN
+            maxLen: Int = MAX_LEN
         ): VersionedMarkdownText {
             val normalized = MarkdownText(rawContent).value
             val hash = ContentHash.ofSha256(normalized)

@@ -1,4 +1,4 @@
-package com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util
+package com.github.shinnosuke0522.demo.cqrs.es.domain.shared.model
 
 open class MarkdownText(val value: String) {
     init {
