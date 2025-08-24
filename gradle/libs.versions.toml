@@ -63,6 +63,7 @@ junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher
 
 # Utils
 ulid = { module = "com.github.f4b6a3:ulid-creator", version = "5.2.3" }
+kotlin-result = { module = "com.michael-bull.kotlin-result:kotlin-result", version = "2.1.0" }
 arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
 arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
 
