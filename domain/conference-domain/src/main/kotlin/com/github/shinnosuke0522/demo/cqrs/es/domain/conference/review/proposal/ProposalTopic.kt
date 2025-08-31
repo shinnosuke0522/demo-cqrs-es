@@ -12,7 +12,7 @@ data class ProposalTopic private constructor(
     companion object {
         private val SNAKE_CASE_REGEX = "^[a-z]+(_[a-z]+)*$".toRegex()
 
-        fun of(keyword: String) : Either<ProposalError, ProposalTopic> =
+        fun of(keyword: String): Either<ProposalError, ProposalTopic> =
             when {
                 keyword.isEmpty() -> failure(
                     InvalidTopicError("ProposalTopic cannot be empty")

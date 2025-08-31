@@ -9,4 +9,4 @@ data class ProgramCommittee(
     val eventId: ConferenceEventId,
     val userId: UserId,
     val isConflictSelf: Boolean = false,
-): AggregateRoot<ProgramCommitteeId>()
+) : AggregateRoot<ProgramCommitteeId>()

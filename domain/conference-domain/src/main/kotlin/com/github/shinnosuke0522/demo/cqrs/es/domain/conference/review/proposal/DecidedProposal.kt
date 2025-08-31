@@ -12,7 +12,7 @@ data class DecidedProposal private constructor(
     override val keywords: Collection<ProposalTopic>,
     override val isDoubleBlinded: Boolean,
     val decision: Decision
-): Proposal(id, conferenceEventId, author, type, contents, keywords, isDoubleBlinded) {
+) : Proposal(id, conferenceEventId, author, type, contents, keywords, isDoubleBlinded) {
     companion object {
         fun of(
             reviewed: ReviewedProposal,

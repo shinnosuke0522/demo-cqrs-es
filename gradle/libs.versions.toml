@@ -3,6 +3,7 @@ kotlin = "2.2.0"
 spring-boot-plugin = "4.0.0-SNAPSHOT"
 spring-dep-mgmt = "1.1.7"
 arrow = "2.1.0"
+detekt = "1.23.8"
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
@@ -10,8 +11,12 @@ kotlin-gradle = { id = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref 
 kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
 spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot-plugin" }
 spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dep-mgmt" }
+detekt-plugin = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 
 [libraries]
+# Plugins
+detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+
 #Spring Boot
 ## WEB
 spring-boot-starter-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux" }

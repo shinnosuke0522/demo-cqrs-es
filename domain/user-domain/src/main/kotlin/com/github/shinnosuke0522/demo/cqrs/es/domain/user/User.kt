@@ -8,4 +8,4 @@ data class User(
     val displayName: String,
     val birthDate: LocalDate,
     val identities: List<Identity>,
-): AggregateRoot<UserId>()
+) : AggregateRoot<UserId>()

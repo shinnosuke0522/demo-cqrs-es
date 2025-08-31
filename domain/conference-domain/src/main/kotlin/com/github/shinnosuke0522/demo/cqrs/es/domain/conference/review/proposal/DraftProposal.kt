@@ -11,7 +11,7 @@ data class DraftProposal private constructor(
     override val contents: ProposalContent,
     override val keywords: Collection<ProposalTopic>,
     override val author: Author,
-): Proposal(id, conferenceEventId, author, type, contents, keywords, isDoubleBlinded) {
+) : Proposal(id, conferenceEventId, author, type, contents, keywords, isDoubleBlinded) {
     companion object {
         fun of(
             conferenceEventId: ConferenceEventId,

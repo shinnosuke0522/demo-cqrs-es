@@ -6,7 +6,6 @@ import com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util.failure
 import com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util.success
 import java.time.Instant
 
-
 @ConsistentCopyVisibility
 data class SessionSchedule private constructor(val start: Instant, val end: Instant) {
     companion object {
@@ -20,7 +19,7 @@ data class SessionSchedule private constructor(val start: Instant, val end: Inst
             }
         }
 
-        private fun validateStart(start: Instant) : Either<SessionError, Instant> =
+        private fun validateStart(start: Instant): Either<SessionError, Instant> =
             when {
                 start.isBefore(Instant.now()) -> failure(
                     InvalidSessionScheduleError("Session start time must be in the future")
@@ -28,7 +27,7 @@ data class SessionSchedule private constructor(val start: Instant, val end: Inst
                 else -> success(start)
             }
 
-        private fun validateEnd(start: Instant, end: Instant) : Either<SessionError, Instant> =
+        private fun validateEnd(start: Instant, end: Instant): Either<SessionError, Instant> =
             when {
                 end.isBefore(Instant.now()) -> failure(
                     InvalidSessionScheduleError("Session end time must be in the future")

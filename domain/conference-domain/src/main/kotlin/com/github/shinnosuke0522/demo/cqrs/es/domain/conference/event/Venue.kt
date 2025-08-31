@@ -60,6 +60,5 @@ data class Venue private constructor(
             } else {
                 success(zipCode)
             }
-
     }
 }

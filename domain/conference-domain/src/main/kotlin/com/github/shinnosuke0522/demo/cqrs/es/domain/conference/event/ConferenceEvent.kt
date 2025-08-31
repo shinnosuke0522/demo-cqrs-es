@@ -16,7 +16,7 @@ data class ConferenceEvent private constructor(
     val meetingUrl: Option<MeetingUrl>,
     val staff: Staffs,
     val organizer: Organizer,
-): AggregateRoot<ConferenceEventId>() {
+) : AggregateRoot<ConferenceEventId>() {
     enum class HostingType {
         ONLINE, OFFLINE, HYBRID
     }

@@ -3,11 +3,11 @@ package com.github.shinnosuke0522.demo.cqrs.es.domain.organization.membership
 import com.github.shinnosuke0522.demo.cqrs.es.domain.base.model.AggregateRoot
 import java.time.Instant
 
-sealed class Membership (
+sealed class Membership(
     open val id: MembershipId,
     open val role: Role,
     open val joinedAt: Instant
-): AggregateRoot<MembershipId>() {
+) : AggregateRoot<MembershipId>() {
 
     enum class Role {
         ADMIN,

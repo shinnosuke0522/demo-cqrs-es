@@ -30,15 +30,12 @@ data class Schedule private constructor(
             }
 
         private fun validateEnd(end: Instant, start: Instant): Either<ConferenceEventError, Instant> =
-            if (end.isBefore(Instant.now())){
+            if (end.isBefore(Instant.now())) {
                 failure(InvalidConferenceEventScheduleError("End time must be in the future"))
-            } else if(end.isBefore(start) || end == start) {
+            } else if (end.isBefore(start) || end == start) {
                 failure(InvalidConferenceEventScheduleError("End time must be after start time"))
             } else {
                 success(end)
             }
     }
-
 }
-
-

@@ -2,7 +2,7 @@ package com.github.shinnosuke0522.demo.cqrs.es.domain.conference.event
 
 import com.github.shinnosuke0522.demo.cqrs.es.domain.conference.shared.OrganizationMembershipId
 
-data class Staff (
+data class Staff(
     val memberShip: OrganizationMembershipId,
     val role: Role,
 ) {

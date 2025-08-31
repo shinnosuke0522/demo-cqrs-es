@@ -4,7 +4,7 @@ import arrow.core.Either
 import com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util.failure
 
 @JvmInline
-value class Speakers  private constructor(val values: List<Speaker>) {
+value class Speakers private constructor(val values: List<Speaker>) {
     companion object {
         const val MAX_SPEAKER_COUNT = 3
         const val MAIN_SPEAKER_SIZE = 1
@@ -23,5 +23,4 @@ value class Speakers  private constructor(val values: List<Speaker>) {
                 else -> Either.Right(Speakers(speakers))
             }
     }
-
 }

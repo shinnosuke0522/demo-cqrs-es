@@ -7,4 +7,4 @@ data class Organization(
     val id: OrganizationId,
     val name: OrganizationName,
     val startedAt: Instant = Instant.now(),
-): AggregateRoot<OrganizationId>()
+) : AggregateRoot<OrganizationId>()

@@ -21,7 +21,6 @@ value class OrganizationName private constructor(val value: String) {
                     InvalidOrganizationNameError("Organization name must be less than or equal to 100 characters")
                 )
                 else -> success(OrganizationName(value))
-        }
+            }
     }
-
 }

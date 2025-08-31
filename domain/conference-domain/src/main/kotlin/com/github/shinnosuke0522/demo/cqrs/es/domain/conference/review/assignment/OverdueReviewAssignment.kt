@@ -19,7 +19,7 @@ data class OverdueReviewAssignment(
     val approvedAt: Option<Instant>,
 ) : ReviewAssignment(id, proposalId, reviewerPcId, dueAt, assignedAt) {
     companion object {
-        fun of(assignment: ReviewAssignment) : Either<ReviewAssignmentError, OverdueReviewAssignment> {
+        fun of(assignment: ReviewAssignment): Either<ReviewAssignmentError, OverdueReviewAssignment> {
             return when (assignment) {
                 is AwaitingReviewAssignment -> success(
                     OverdueReviewAssignment(
@@ -43,9 +43,11 @@ data class OverdueReviewAssignment(
                 )
                 is CompletedReviewAssignment,
                 is RejectedReviewAssignment,
-                is OverdueReviewAssignment -> failure(ReviewAssignmentAlreadyFixedError(
-                    "Cannot be overdue because the review assignment is already completed. (id: ${assignment.id})"
-                ))
+                is OverdueReviewAssignment -> failure(
+                    ReviewAssignmentAlreadyFixedError(
+                        "Cannot be overdue because the review assignment is already completed. (id: ${assignment.id})"
+                    )
+                )
             }
         }
     }

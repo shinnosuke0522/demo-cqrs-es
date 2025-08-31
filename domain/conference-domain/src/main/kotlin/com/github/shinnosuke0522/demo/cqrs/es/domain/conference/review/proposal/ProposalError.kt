@@ -17,4 +17,4 @@ data class InvalidTopicError(
 data class ProposalAuthorNotFoundError(
     override val message: String,
     override val cause: DomainError.Cause = DomainError.Cause.None,
-): ProposalError
+) : ProposalError
