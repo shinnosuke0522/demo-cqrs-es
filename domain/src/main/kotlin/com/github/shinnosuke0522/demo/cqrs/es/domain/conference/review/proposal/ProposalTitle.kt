@@ -1,4 +1,4 @@
-package com.github.shinnosuke0522.demo.cqrs.es.domain.proposal
+package com.github.shinnosuke0522.demo.cqrs.es.domain.conference.review.proposal
 
 import arrow.core.Either
 import com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util.failure

@@ -1,11 +1,11 @@
-package com.github.shinnosuke0522.demo.cqrs.es.domain.review.assignment
+package com.github.shinnosuke0522.demo.cqrs.es.domain.conference.review.assignment
 
 import arrow.core.Either
 import arrow.core.Option
 import arrow.core.none
 import arrow.core.some
 import com.github.shinnosuke0522.demo.cqrs.es.domain.conference.committee.ProgramCommitteeId
-import com.github.shinnosuke0522.demo.cqrs.es.domain.proposal.ProposalId
+import com.github.shinnosuke0522.demo.cqrs.es.domain.conference.review.proposal.ProposalId
 import com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util.failure
 import com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util.success
 import java.time.Instant
@@ -16,7 +16,7 @@ data class OverdueReviewAssignment(
     override val reviewerPcId: ProgramCommitteeId,
     override val dueAt: Instant,
     override val assignedAt: Instant,
-    val approvedAt: Option<Instant>
+    val approvedAt: Option<Instant>,
 ) : ReviewAssignment {
     companion object {
         fun of(assignment: ReviewAssignment) : Either<ReviewAssignmentError, OverdueReviewAssignment> {

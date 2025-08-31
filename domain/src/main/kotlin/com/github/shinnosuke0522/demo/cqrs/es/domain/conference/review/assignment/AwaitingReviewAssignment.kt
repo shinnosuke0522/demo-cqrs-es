@@ -1,7 +1,7 @@
-package com.github.shinnosuke0522.demo.cqrs.es.domain.review.assignment
+package com.github.shinnosuke0522.demo.cqrs.es.domain.conference.review.assignment
 
 import com.github.shinnosuke0522.demo.cqrs.es.domain.conference.committee.ProgramCommitteeId
-import com.github.shinnosuke0522.demo.cqrs.es.domain.proposal.ProposalId
+import com.github.shinnosuke0522.demo.cqrs.es.domain.conference.review.proposal.ProposalId
 import java.time.Instant
 
 data class AwaitingReviewAssignment(

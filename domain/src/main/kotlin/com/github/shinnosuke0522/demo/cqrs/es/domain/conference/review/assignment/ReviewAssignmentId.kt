@@ -1,4 +1,4 @@
-package com.github.shinnosuke0522.demo.cqrs.es.domain.review.assignment
+package com.github.shinnosuke0522.demo.cqrs.es.domain.conference.review.assignment
 
 import com.github.shinnosuke0522.demo.cqrs.es.libraries.fundamentals.ULID
 
