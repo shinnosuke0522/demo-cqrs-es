@@ -6,5 +6,9 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-include(":domain")
+//include(":domain")
+include(":domain:domain-base")
+include(":domain:conference-domain")
+include(":domain:organization-domain")
+include(":domain:user-domain")
 include(":libraries:fundamentals")

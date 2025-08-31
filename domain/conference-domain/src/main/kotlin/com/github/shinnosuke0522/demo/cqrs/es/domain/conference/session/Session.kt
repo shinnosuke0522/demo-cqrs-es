@@ -1,0 +1,16 @@
+package com.github.shinnosuke0522.demo.cqrs.es.domain.conference.session
+
+import com.github.shinnosuke0522.demo.cqrs.es.domain.base.model.AggregateRoot
+import com.github.shinnosuke0522.demo.cqrs.es.domain.conference.event.ConferenceEventId
+import com.github.shinnosuke0522.demo.cqrs.es.domain.conference.review.proposal.ProposalId
+import com.github.shinnosuke0522.demo.cqrs.es.domain.base.model.MarkdownText
+
+data class Session(
+    val id: SessionId,
+    val conferenceId: ConferenceEventId,
+    val title: SessionTitle,
+    val abstractMarkdown: MarkdownText,
+    val outlineMarkdown: MarkdownText,
+    val speakers: Speakers,
+    val proposal: ProposalId,
+): AggregateRoot<SessionId>()
