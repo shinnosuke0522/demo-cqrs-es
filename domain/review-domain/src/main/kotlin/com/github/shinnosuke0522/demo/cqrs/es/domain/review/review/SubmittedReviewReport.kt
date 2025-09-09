@@ -1,18 +1,18 @@
 package com.github.shinnosuke0522.demo.cqrs.es.domain.review.review
 
-import com.github.shinnosuke0522.demo.cqrs.es.domain.review.assignment.ReviewAssignmentId
+import com.github.shinnosuke0522.demo.cqrs.es.domain.review.assignment.event.AssignmentEventId
 import java.time.Instant
 
 data class SubmittedReviewReport(
     override val id: ReviewReportId,
-    override val assignmentId: ReviewAssignmentId,
+    override val assignmentId: AssignmentEventId,
     override val recommendation: Recommendation,
     override val commentForAuthor: String,
     val submittedAt: Instant,
 ) : ReviewReport(id, assignmentId, recommendation, commentForAuthor) {
     companion object {
         fun of(
-            assignmentId: ReviewAssignmentId,
+            assignmentId: AssignmentEventId,
             recommendation: Recommendation,
             commentForAuthor: String,
             submittedAt: Instant = Instant.now(),

@@ -1,11 +1,11 @@
 package com.github.shinnosuke0522.demo.cqrs.es.domain.review.review
 
-import com.github.shinnosuke0522.demo.cqrs.es.domain.review.assignment.ReviewAssignmentId
+import com.github.shinnosuke0522.demo.cqrs.es.domain.review.assignment.event.AssignmentEventId
 
 @ConsistentCopyVisibility
 data class DraftReviewReport private constructor(
     override val id: ReviewReportId,
-    override val assignmentId: ReviewAssignmentId,
+    override val assignmentId: AssignmentEventId,
     override val recommendation: Recommendation,
     override val commentForAuthor: String,
 ) : ReviewReport(id, assignmentId, recommendation, commentForAuthor) {
@@ -20,7 +20,7 @@ data class DraftReviewReport private constructor(
 
     companion object {
         fun of(
-            assignmentId: ReviewAssignmentId,
+            assignmentId: AssignmentEventId,
             recommendation: Recommendation,
             commentForAuthor: String
         ): DraftReviewReport = DraftReviewReport(

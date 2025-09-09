@@ -4,7 +4,12 @@ import com.github.f4b6a3.ulid.Ulid
 import com.github.f4b6a3.ulid.UlidCreator
 
 @JvmInline
-value class ULID private constructor(val value: Ulid) : Comparable<ULID> {
+value class ULID private constructor(private val value: Ulid) : Comparable<ULID> {
+
+    fun toInstant() = value.instant
+
+    fun value() = value.toString()
+
     override fun compareTo(other: ULID): Int = this.value.compareTo(other.value)
 
     companion object {
