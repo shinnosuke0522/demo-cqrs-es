@@ -8,7 +8,7 @@ pluginManagement {
 }
 //include(":domain")
 include(":domain:domain-base")
-include(":domain:conference-domain")
+include(":domain:review-domain")
 include(":domain:organization-domain")
 include(":domain:user-domain")
 include(":libraries:fundamentals")

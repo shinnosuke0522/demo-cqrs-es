@@ -1,8 +1,8 @@
 package com.github.shinnosuke0522.demo.cqrs.es.domain.user
 
 import arrow.core.Either
-import com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util.failure
-import com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util.success
+import com.github.shinnosuke0522.demo.cqrs.es.libraries.fundamentals.failure
+import com.github.shinnosuke0522.demo.cqrs.es.libraries.fundamentals.success
 
 @JvmInline
 value class Email private constructor(val value: String) {

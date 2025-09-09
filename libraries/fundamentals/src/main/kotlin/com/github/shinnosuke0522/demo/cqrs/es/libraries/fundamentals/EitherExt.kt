@@ -1,4 +1,4 @@
-package com.github.shinnosuke0522.demo.cqrs.es.domain.shared.util
+package com.github.shinnosuke0522.demo.cqrs.es.libraries.fundamentals
 
 import arrow.core.Either
 import arrow.core.left

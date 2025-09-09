@@ -48,7 +48,7 @@ subprojects {
         // ルール違反があった場合にfailさせない
         // (正確にはルール違反の数がDetekt設定のmaxIssuesの値を超えたときにfailするのだが、
         //  デフォルト設定ではmaxIssuesは0になっているため、1つでもルール違反があるとfailする）
-        ignoreFailures = true
+//        ignoreFailures = true
         // レポートファイルに出力されるファイルパスのベースとなる
         // これが設定されてないとレポートファイルのパスは絶対パスになる
         basePath = rootDir.absolutePath + "/reports/detekt"

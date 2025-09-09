@@ -22,6 +22,8 @@ data class VersionedMarkdownText private constructor(
 
     @JvmInline
     value class ContentHash private constructor(val value: String) {
+        override fun toString(): String = value
+
         companion object {
             fun ofSha256(text: String): ContentHash {
                 val md = MessageDigest.getInstance("SHA-256")
@@ -29,7 +31,6 @@ data class VersionedMarkdownText private constructor(
                 return ContentHash(bytes.joinToString(separator = "") { "%02x".format(it) })
             }
         }
-        override fun toString(): String = value
     }
 
     /* ---------- 現在版／整合性 ---------- */
@@ -47,7 +48,6 @@ data class VersionedMarkdownText private constructor(
         newRawContent: String,
         updatedBy: String,
         at: Instant = Instant.now(),
-        maxLen: Int = MAX_LEN
     ): VersionedMarkdownText {
         // 常にファクトリを通して正規化・検証
         val normalized = MarkdownText(newRawContent)
@@ -77,7 +77,6 @@ data class VersionedMarkdownText private constructor(
             rawContent: String,
             updatedBy: String,
             at: Instant = Instant.now(),
-            maxLen: Int = MAX_LEN
         ): VersionedMarkdownText {
             val normalized = MarkdownText(rawContent).value
             val hash = ContentHash.ofSha256(normalized)
