@@ -50,7 +50,7 @@ data class VersionedMarkdownText private constructor(
         at: Instant = Instant.now(),
     ): VersionedMarkdownText {
         // 常にファクトリを通して正規化・検証
-        val normalized = MarkdownText(newRawContent)
+        val normalized = MarkdownText.of(newRawContent)
         val newHash = ContentHash.ofSha256(normalized.value)
         val cur = currentMeta()
 
@@ -78,7 +78,7 @@ data class VersionedMarkdownText private constructor(
             updatedBy: String,
             at: Instant = Instant.now(),
         ): VersionedMarkdownText {
-            val normalized = MarkdownText(rawContent).value
+            val normalized = MarkdownText.of(rawContent).value
             val hash = ContentHash.ofSha256(normalized)
             val meta = VersionMeta(
                 version = 1,

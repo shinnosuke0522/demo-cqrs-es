@@ -7,8 +7,8 @@ value class ConferenceEventId private constructor(val value: ULID) : Comparable<
     override fun compareTo(other: ConferenceEventId): Int = this.value.compareTo(other.value)
 
     companion object {
-        fun generate(): ConferenceEventId = ConferenceEventId(ULID.Companion.generate())
+        fun generate(): ConferenceEventId = ConferenceEventId(ULID.generate())
 
-        fun of(value: String): ConferenceEventId = ConferenceEventId(ULID.Companion.of(value))
+        fun of(value: String): ConferenceEventId = ConferenceEventId(ULID.of(value))
     }
 }

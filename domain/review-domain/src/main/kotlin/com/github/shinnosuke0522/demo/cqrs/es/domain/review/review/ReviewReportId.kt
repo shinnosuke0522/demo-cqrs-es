@@ -7,7 +7,7 @@ value class ReviewReportId private constructor(val value: ULID) : Comparable<Rev
     override fun compareTo(other: ReviewReportId): Int = this.value.compareTo(other.value)
 
     companion object {
-        fun generate(): ReviewReportId = ReviewReportId(ULID.Companion.generate())
-        fun of(value: String): ReviewReportId = ReviewReportId(ULID.Companion.of(value))
+        fun generate(): ReviewReportId = ReviewReportId(ULID.generate())
+        fun of(value: String): ReviewReportId = ReviewReportId(ULID.of(value))
     }
 }

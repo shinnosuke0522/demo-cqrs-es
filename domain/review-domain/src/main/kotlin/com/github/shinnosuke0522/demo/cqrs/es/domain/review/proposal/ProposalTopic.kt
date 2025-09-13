@@ -6,7 +6,7 @@ import com.github.shinnosuke0522.demo.cqrs.es.libraries.fundamentals.success
 
 @ConsistentCopyVisibility
 data class ProposalTopic private constructor(
-    val id: ProposalId,
+    val id: ProposalTopicId,
     val keyword: String,
 ) {
     companion object {
@@ -25,7 +25,7 @@ data class ProposalTopic private constructor(
                     InvalidTopicError("ProposalTopic must be in snake_case format")
                 )
                 else -> success(
-                    ProposalTopic(ProposalId.generate(), keyword)
+                    ProposalTopic(ProposalTopicId.generate(), keyword)
                 )
             }
     }
